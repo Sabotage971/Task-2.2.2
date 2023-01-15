@@ -5,8 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-import web.dao.CarDao;
-import web.service.CarService;
+import web.service.CarServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +14,7 @@ import java.util.List;
 public class HelloController {
 
 	@Autowired
-	private CarService service;
+	private CarServiceImpl service;
 
 	@GetMapping(value = "/")
 	public String printWelcome(ModelMap model) {
