@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 @Component
 public class CarDao {
-    private final List<Car> cars;
+    public final List<Car> cars;
 
     public CarDao() {
         cars = new ArrayList<>();
@@ -19,11 +19,5 @@ public class CarDao {
         cars.add(new Car("Ford Focus", "USA", 2001));
         cars.add(new Car("Toyota Corolla AE86", "Japan", 1985));
     }
-    public List<Car> getCountCars(int count) {
-        if ((count >=5) || (count < 0)) {
-            return cars;
-        } else {
-            return cars.stream().limit(count).collect(Collectors.toList());
-        }
+
     }
-}
